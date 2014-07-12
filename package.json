@@ -1,7 +1,7 @@
 {
   "name": "github-issues",
-  "version": "0.0.0",
-  "description": "A utility belt to manage and fetch github issues ",
+  "version": "1.0.0",
+  "description": "A utility belt to manage and fetch github issues",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +18,9 @@
   "author": "David Dias <daviddias.p@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "duplex": "^1.0.0",
     "jshint": "^2.5.2",
-    "precommit-hook": "^1.0.2"
+    "precommit-hook": "^1.0.2",
+    "request": "^2.37.0"
   }
 }
