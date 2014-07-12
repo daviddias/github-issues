@@ -1,0 +1,24 @@
+{
+  "name": "github-issues",
+  "version": "0.0.0",
+  "description": "A utility belt to manage and fetch github issues ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:diasdavid/github-issues.git"
+  },
+  "keywords": [
+    "issues",
+    "github",
+    "bananas"
+  ],
+  "author": "David Dias <daviddias.p@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jshint": "^2.5.2",
+    "precommit-hook": "^1.0.2"
+  }
+}
