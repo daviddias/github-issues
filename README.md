@@ -8,7 +8,6 @@ tl;dr; A utility belt to manage and fetch github issues
 
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/diasdavid/github-issues?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) 
 [![Dependency Status](https://david-dm.org/diasdavid/github-issues.svg)](https://david-dm.org/diasdavid/github-issues)
-[![Build Status](https://travis-ci.org/diasdavid/github-issues.svg)](https://travis-ci.org/diasdavid/github-issues)
 
 
 ### fetchIssues 
