@@ -1,23 +1,29 @@
 {
-  "node"          : true,
-  "quotmark"      : true,
-  "strict"        : false,
-  "smarttabs"     : true,
-  "trailing"      : true,
-  "undef"         : true,
-  "unused"        : false,
-  "maxerr"        : 50,
-  "laxcomma"      : true,
-  "curly"         : true,
-  "eqeqeq"        : true,
-  "freeze"        : true,
-  "indent"        : 2,
-  "maxdepth"      : 3,
-  "maxlen"        : 80,
-  "globals"       : {
-                      "console": true,
-                      "require": true,
-                      "$": true,
-                      "alert": true
+  "asi": false,
+  "expr": true,
+  "loopfunc": true,
+  "strict": false,
+  "curly": true,
+  "evil": true,
+  "curly": true,
+  "white": true,
+  "trailing": true,
+  "eqeqeq": true,
+  "immed": true,
+  "indent": 2,
+  "debug": true,
+  "newcap": true,
+  "undef": true,
+  "unused": false,
+
+  "quotmark": "single",
+  "maxdepth": 3,
+  "maxlen": 80,
+
+  "node": true,
+  "browser": false,
+
+  "globals": {
+    "window": true
   }
 }

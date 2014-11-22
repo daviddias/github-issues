@@ -1,11 +1,21 @@
 {
   "name": "github-issues",
   "version": "1.0.0",
-  "description": "A utility belt to manage and fetch github issues",
-  "main": "index.js",
+  "description": "A utility to fetch github issues",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "codestyle": "./node_modules/.bin/jscs -p google src/index.js tests/*.js",
+    "lint": "./node_modules/.bin/jshint",
+    "test": "node ./node_modules/.bin/lab -r tap tests/*-test.js | ./node_modules/.bin/tap-spec",
+    "test-cov": "node ./node_modules/.bin/lab -t 80 tests/*-test.js",
+    "test-cov-html": "node ./node_modules/.bin/lab -r html -o coverage.html tests/*-test.js"
   },
+  "precommit": [
+    "codestyle",
+    "lint",
+    "test",
+    "test-cov"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:diasdavid/github-issues.git"
@@ -19,8 +29,14 @@
   "license": "MIT",
   "dependencies": {
     "duplex": "^1.0.0",
+    "request": "^2.37.0"
+  },
+  "devDependencies": {
     "jshint": "^2.5.2",
     "precommit-hook": "^1.0.2",
-    "request": "^2.37.0"
+    "code": "^1.2.1",
+    "jscs": "^1.7.3",
+    "lab": "^5.0.3",
+    "tap-spec": "^2.1.0"
   }
 }

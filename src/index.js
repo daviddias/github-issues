@@ -5,19 +5,17 @@ exports         = module.exports;
 var config = {
   'repo'       : null,
   'useragent'  : null,
-  'state'      : null,
   'accesstoken': null
 };
 
-exports.setConfig = function (_config) {
+exports.setConfig = function(_config) {
   config.repo        = _config.repo;
   config.useragent   = _config.useragent;
-  config.state       = _config.state;
   config.accesstoken = _config.accesstoken;
 };
 
-exports.fetchIssues = function (_state) {
-  if(!config.useragent || !config.accesstoken){
+exports.fetchIssues = function(_state) {
+  if (!config.useragent || !config.accesstoken) {
     return console.log('No access credentials defined');
   }
 
@@ -29,14 +27,14 @@ exports.fetchIssues = function (_state) {
     qs: {
       state: _state || 'open',
       page: 1,
-      access_token: config.accesstoken
-    }
+      access_token: config.accesstoken  // jscs:disable
+    }                                   // jscs:enable
   };
 
   var returnStream = duplex();
   var tempStream   = duplex();
   tempStream.pause();
-  tempStream.on('_data', function (issue) {
+  tempStream.on('_data', function(issue) {
     returnStream.write(issue);
   });
 
@@ -61,12 +59,11 @@ exports.fetchIssues = function (_state) {
   }
 
   function parseIssues(body) {
-    if(body.indexOf('API rate limit exceeded') !== -1) {
-      console.log('API rate limit exceeded');
-      return;
+    if (body.indexOf('API rate limit exceeded') !== -1) {
+      return console.log('API rate limit exceeded');
     }
 
-    JSON.parse(body).forEach(function (issue) {
+    JSON.parse(body).forEach(function(issue) {
       tempStream.write(issue);
     });
   }
