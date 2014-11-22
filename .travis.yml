@@ -7,7 +7,7 @@ branches:
     - master
 
 before_install:
-  - npm i -g npm
   # Workaround for a permissions issue with Travis virtual machine images
+  - npm i -g npm
 script:
   - npm test
